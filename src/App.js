@@ -2,22 +2,19 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const name = 'Willian'
+  const newName = name.toLocaleUpperCase()
+
+  const sum = (a,b) => a + b
+
+  const imgUrl = 'https://via.placeholder.com/150'
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h2>Alterando JSX</h2>
+      <h3>Olá {name}</h3>
+      <h3>Usando variável uppercaseada {newName}</h3>
+      <p>Soma: 3 + 3 = {sum(3,3)}</p>
+      <img src={imgUrl} alt="Minha imagem" />
     </div>
   );
 }
