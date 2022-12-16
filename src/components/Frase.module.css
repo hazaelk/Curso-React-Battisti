@@ -1,0 +1,11 @@
+/* camelCase ou under_line */
+.fraseContainer {
+ background-color: #333;
+ border: 1px solid #111;
+}
+
+.fraseContent {
+ color: #fff;
+ background-color: #444;
+ margin: 2px;
+}
