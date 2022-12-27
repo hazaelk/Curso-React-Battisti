@@ -1,28 +1,22 @@
-import HelloWorld from './components/HelloWorld';
-import SayMyName from './components/SayMyName';
-import Pessoa from './components/Pessoa';
-import Frase from './components/Frase'
-import List from './components/List'
-import Evento from './components/Evento'
-import Form from './components/Form'
-
-import './App.css';
-import Condicional from './components/Condicional';
-
+import './App.css'
+import { BrowserRouter as Router, Switch, Route, Routes } from 'react-router-dom'
+import Home from './pages/Home'
+import Empresa from './pages/Empresa'
+import Contato from './pages/Contato'
+import Navbar from './components/layout/Navbar'
+import Footer from './components/layout/Footer'
 function App() {
-  // const name = 'will'
-  //   window.prompt("Qual seu nome?")
-  // const newName = name.toLocaleUpperCase()
-
-  // const sum = (a,b) => a + b
-
-  // const imgUrl = "https://via.placeholder.com/"
   return (
-    <div className="App">
-      <h1>Renderização Condicional</h1>
-      <Condicional />
-    </div>
-  );
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route path="/empresa" element={<Empresa />} />
+        <Route path="/contato" element={<Contato />} />
+      </Routes>
+      <Footer />
+    </Router>
+  )
 }
 
-export default App;
+export default App
